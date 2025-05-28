@@ -32,8 +32,8 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
+   # ports:
+    #  - "8000:8000"
     volumes:
       - ./backend/.env:/app/.env:ro
     env_file:
@@ -83,8 +83,8 @@ services:
         NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
+  #  ports:
+   #   - "3000:3000"
     volumes:
       - ./frontend/.env.local:/app/.env.local:ro
     environment:
